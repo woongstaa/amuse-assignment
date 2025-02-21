@@ -19,7 +19,7 @@ export function FormInput<T extends FieldValues>({ control, name, label, placeho
         <FormItem>
           <FormLabel>{label}</FormLabel>
           <FormControl>
-            <Input placeholder={placeholder} {...field} />
+            <Input className='text-[14px]' placeholder={placeholder} {...field} />
           </FormControl>
           {description && <FormDescription>{description}</FormDescription>}
           <FormMessage />

@@ -9,7 +9,7 @@ export const todoSchema = z.object({
   createdAt: z.date(),
   lastEditedAt: z.date(),
   removedAt: z.date().optional(),
-  isPrior: z.boolean(),
+  priority: z.enum(['0', '1', '2', '3']).nullish(),
   isComplete: z.boolean()
 });
 
@@ -30,8 +30,8 @@ export const createTodoSchema = todoSchema
 export type CreateTodo = z.infer<typeof createTodoSchema>;
 
 export const todoApi = {
-  getTodos: async () => {
-    const response = await api<Todo[]>('get', '/todos');
+  getTodos: async (queryParams?: { [key: string]: string }) => {
+    const response = await api<Todo[]>('get', '/todos', undefined, { params: queryParams });
     return response;
   },
   createTodo: async (todo: CreateTodo) => {
