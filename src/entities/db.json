@@ -1,0 +1,20 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "",
+      "dueDate": "",
+      "place": {
+        "name": "",
+        "address": ""
+      },
+      "memo": "",
+      "url": "",
+      "createdAt": "",
+      "lastEditedAt": "",
+      "removedAt": "",
+      "isPrior": false,
+      "isComplete": false
+    }
+  ]
+}
