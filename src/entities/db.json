@@ -1,50 +1,11 @@
 {
   "todos": [
     {
-      "id": "7120",
-      "title": "ㅂㅂㅂ",
+      "id": "1002",
+      "title": "qweqweqweqwecccqqqqq",
       "memo": "",
-      "isPrior": false,
-      "isComplete": false,
-      "createdAt": "2025-02-21T10:47:38.864Z",
-      "lastEditedAt": "2025-02-21T10:47:38.864Z"
-    },
-    {
-      "id": "f7db",
-      "title": "ㅇ",
-      "memo": "",
-      "isPrior": false,
-      "isComplete": true,
-      "createdAt": "2025-02-21T13:33:26.240Z",
-      "lastEditedAt": "2025-02-21T13:33:26.240Z"
-    },
-    {
-      "id": "c562",
-      "title": "ㅋㅌㅊ",
-      "dueDate": "2025-02-24T15:00:00.000Z",
-      "memo": "",
-      "isPrior": false,
-      "isComplete": true,
-      "createdAt": "2025-02-21T13:37:43.917Z",
-      "lastEditedAt": "2025-02-21T13:37:43.917Z"
-    },
-    {
-      "id": "1995",
-      "title": "www",
-      "memo": "",
-      "priority": "2",
-      "isComplete": true,
-      "createdAt": "2025-02-21T14:01:11.263Z",
-      "lastEditedAt": "2025-02-21T14:01:11.263Z"
-    },
-    {
-      "id": "8b16",
-      "title": "wwwwww",
-      "memo": "",
-      "priority": "3",
-      "isComplete": true,
-      "createdAt": "2025-02-21T14:07:48.270Z",
-      "lastEditedAt": "2025-02-21T14:07:48.270Z"
+      "priority": "0",
+      "isComplete": false
     }
   ]
 }

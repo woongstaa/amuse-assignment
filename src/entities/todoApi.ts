@@ -2,13 +2,10 @@ import { z } from 'zod';
 import api from './api';
 
 export const todoSchema = z.object({
-  id: z.number(),
+  id: z.string(),
   title: z.string().nonempty('할 일을 입력해주세요').min(1, '할 일을 1자 이상 입력해주세요'),
   dueDate: z.date().optional(),
   memo: z.string().optional(),
-  createdAt: z.date(),
-  lastEditedAt: z.date(),
-  removedAt: z.date().optional(),
   priority: z.enum(['0', '1', '2', '3']).nullish(),
   isComplete: z.boolean()
 });
@@ -17,10 +14,7 @@ export type Todo = z.infer<typeof todoSchema>;
 
 export const createTodoSchema = todoSchema
   .omit({
-    id: true,
-    createdAt: true,
-    lastEditedAt: true,
-    removedAt: true
+    id: true
   })
   .extend({
     createdAt: z.date().default(() => new Date()),
@@ -42,7 +36,7 @@ export const todoApi = {
     const response = await api('put', `/todos/${todo.id}`, todo);
     return response;
   },
-  deleteTodo: async (id: number) => {
+  deleteTodo: async (id: string) => {
     const response = await api('delete', `/todos/${id}`);
     return response;
   }

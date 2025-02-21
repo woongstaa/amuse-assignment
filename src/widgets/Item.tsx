@@ -7,17 +7,19 @@ import { Trash2 } from 'lucide-react';
 export function Item({
   todo,
   onCheck,
-  onDelete
+  onDelete,
+  onEdit
 }: //
 {
   todo: Todo;
   onCheck: (todo: Todo) => void;
   onDelete: (todo: Todo) => void;
+  onEdit: (todo: Todo) => void;
 }) {
   const { title, dueDate, memo, isComplete, priority } = todo;
 
   return (
-    <div className='p-4 flex group relative'>
+    <div className='p-4 flex group relative' onClick={() => onEdit(todo)}>
       <Checkbox checked={isComplete} onClick={() => onCheck(todo)} />
       <div className='w-2' />
       <div className='max-w-[460px]'>
@@ -43,7 +45,10 @@ export function Item({
       <Trash2 //
         className='hidden group-hover:block absolute top-3 right-0 hover:text-red-500'
         size={20}
-        onClick={() => onDelete(todo)}
+        onClick={(e) => {
+          e.stopPropagation();
+          onDelete(todo);
+        }}
       />
     </div>
   );
