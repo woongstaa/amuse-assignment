@@ -15,12 +15,26 @@ export const todoSchema = z.object({
 
 export type Todo = z.infer<typeof todoSchema>;
 
+export const createTodoSchema = todoSchema
+  .omit({
+    id: true,
+    createdAt: true,
+    lastEditedAt: true,
+    removedAt: true
+  })
+  .extend({
+    createdAt: z.date().default(() => new Date()),
+    lastEditedAt: z.date().default(() => new Date())
+  });
+
+export type CreateTodo = z.infer<typeof createTodoSchema>;
+
 export const todoApi = {
   getTodos: async () => {
-    const response = await api('get', '/todos');
+    const response = await api<Todo[]>('get', '/todos');
     return response;
   },
-  createTodo: async (todo: Todo) => {
+  createTodo: async (todo: CreateTodo) => {
     const response = await api('post', '/todos', todo);
     return response;
   },

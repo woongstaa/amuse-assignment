@@ -1,8 +1,8 @@
 // import { Moon, Sun } from 'lucide-react';
 // import { useTheme } from '../apps/ThemeProvider';
 import { useState } from 'react';
-import { Input } from '../shared/ui/input';
-import { Button } from '../shared/ui/button';
+import { Input } from '../shared/ui/Input';
+import { Button } from '../shared/ui/Button';
 import { Search } from 'lucide-react';
 
 export function Top() {

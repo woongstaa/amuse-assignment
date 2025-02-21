@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "src/shared/ui/form.tsx", "src/shared/ui/label.tsx"]
+  "include": ["src", "src/shared/ui/Form.tsx", "src/shared/ui/Label.tsx"]
 }

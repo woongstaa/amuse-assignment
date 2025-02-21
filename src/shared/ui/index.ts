@@ -1,5 +1,7 @@
-export { Form } from './form';
-export { Input } from './input';
-export { Button } from './button';
-export { Card } from './card';
-export { Label } from './label';
+export { Form } from './Form';
+export { Input } from './Input';
+export { Button } from './Button';
+export { Card } from './Card';
+export { Label } from './Label';
+export { Checkbox } from './Checkbox';
+export { Separator } from './Separator';
