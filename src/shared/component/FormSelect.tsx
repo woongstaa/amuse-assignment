@@ -1,14 +1,14 @@
-import { FormDescription } from '../shared/ui/Form';
-import { SelectContent } from '../shared/ui/Select';
-import { SelectValue } from '../shared/ui/Select';
-import { SelectTrigger } from '../shared/ui/Select';
-import { SelectItem } from '../shared/ui/Select';
-import { FormControl } from '../shared/ui/Form';
+import { FormDescription } from '../ui/Form';
+import { SelectContent } from '../ui/Select';
+import { SelectValue } from '../ui/Select';
+import { SelectTrigger } from '../ui/Select';
+import { SelectItem } from '../ui/Select';
+import { FormControl } from '../ui/Form';
 
-import { FormField, FormItem, FormLabel, FormMessage } from '../shared/ui/Form';
-import { Select } from '../shared/ui/Select';
+import { FormField, FormItem, FormLabel, FormMessage } from '../ui/Form';
+import { Select } from '../ui/Select';
 import { Control, FieldValues, Path } from 'react-hook-form';
-import { cn } from '../shared/lib/utils';
+import { cn } from '../lib/utils';
 
 interface Props<T extends FieldValues> {
   control: Control<T>;

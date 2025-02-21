@@ -1,11 +1,3 @@
 {
-  "todos": [
-    {
-      "id": "1002",
-      "title": "qweqweqweqwecccqqqqq",
-      "memo": "",
-      "priority": "0",
-      "isComplete": false
-    }
-  ]
+  "todos": []
 }

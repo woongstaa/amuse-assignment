@@ -1,6 +1,6 @@
-import { FormInput } from '../../features/FormInput';
-import { FormDatepicker } from '../../features/FormDatepicker';
-import { FormSelect } from '../../features/FormSelect';
+import { FormInput } from '../../shared/component/FormInput';
+import { FormDatepicker } from '../../shared/component/FormDatepicker';
+import { FormSelect } from '../../shared/component/FormSelect';
 import { Path, UseFormReturn } from 'react-hook-form';
 import { FormWrapper } from '../../shared/component';
 import { Todo, CreateTodo } from '../../entities/todoApi';

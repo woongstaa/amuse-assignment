@@ -1,9 +1,8 @@
-import { useState } from 'react';
 import { Top, Bottom } from '../widgets';
 import { List } from '../widgets/List';
 import { EditTodoForm } from '../widgets/modal/EditTodoForm';
 import { AddTodoForm } from '../widgets/modal/AddTodoForm';
-import { Todo } from '../entities/todoApi';
+import { useTodos } from '../features/useTodos';
 
 export function Todos() {
   const {
@@ -26,19 +25,4 @@ export function Todos() {
       <EditTodoForm isVisible={editModalVisible} setIsVisible={setEditModalVisible} currentTodo={currentTodo} />
     </main>
   );
-}
-
-function useTodos() {
-  const [addModalVisible, setAddModalVisible] = useState(false);
-  const [editModalVisible, setEditModalVisible] = useState(false);
-  const [currentTodo, setCurrentTodo] = useState<Todo | null>(null);
-
-  return {
-    addModalVisible, //
-    editModalVisible,
-    setAddModalVisible,
-    setEditModalVisible,
-    currentTodo,
-    setCurrentTodo
-  };
 }

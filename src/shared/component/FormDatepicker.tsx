@@ -1,9 +1,9 @@
 import { Control, FieldValues, Path } from 'react-hook-form';
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '../shared/ui/Form';
-import { Popover, PopoverContent, PopoverTrigger } from '../shared/ui/Popover';
-import { Button } from '../shared/ui/Button';
-import { Calendar } from '../shared/ui/Calendar';
-import { cn } from '../shared/lib/utils';
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '../ui/Form';
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/Popover';
+import { Button } from '../ui/Button';
+import { Calendar } from '../ui/Calendar';
+import { cn } from '../lib/utils';
 import { format } from 'date-fns';
 import { CalendarIcon } from 'lucide-react';
 

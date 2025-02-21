@@ -1,6 +1,6 @@
 import { Control, FieldValues, Path } from 'react-hook-form';
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '../shared/ui/Form';
-import { Input } from '../shared/ui/Input';
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '../ui/Form';
+import { Input } from '../ui/Input';
 
 interface Props<T extends FieldValues> {
   control: Control<T>;

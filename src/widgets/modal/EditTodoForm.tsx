@@ -1,12 +1,9 @@
 import { Container } from './Container';
 import { TodoForm } from './TodoForm';
 import { Button } from '../../shared/ui/Button';
-import { useForm } from 'react-hook-form';
-import { Todo, todoApi, todoSchema } from '../../entities/todoApi';
-import { useMutation } from '@tanstack/react-query';
-import { useQueryClient } from '@tanstack/react-query';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useEffect } from 'react';
+import { Todo } from '../../entities/todoApi';
+
+import { useEditTodoForm } from '../../features/useEditTodoForm';
 
 export function EditTodoForm({
   isVisible, //
@@ -17,13 +14,13 @@ export function EditTodoForm({
   setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
   currentTodo: Todo | null;
 }) {
-  const { form, onSubmit } = useEditTodoForm({ setIsVisible, currentTodo });
+  const { form, mutate } = useEditTodoForm({ setIsVisible, currentTodo });
 
   return (
     <Container isVisible={isVisible} setIsVisible={setIsVisible}>
       <TodoForm //
         form={form}
-        onSubmit={onSubmit}
+        onSubmit={mutate}
         submitComponent={<SubmitComponent setIsVisible={setIsVisible} />}
       />
     </Container>
@@ -42,37 +39,4 @@ function SubmitComponent({ setIsVisible }: { setIsVisible: (isVisible: boolean) 
       </div>
     </>
   );
-}
-
-function useEditTodoForm({ setIsVisible, currentTodo }: { setIsVisible: (isVisible: boolean) => void; currentTodo: Todo | null }) {
-  const queryClient = useQueryClient();
-  const form = useForm<Todo>({
-    resolver: zodResolver(todoSchema)
-  });
-
-  const mutation = useMutation({
-    mutationFn: (formData: Todo) => {
-      return todoApi.updateTodo(formData);
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['todos'] });
-      setIsVisible(false);
-      form.reset();
-    },
-    onError: (error) => {
-      console.error('Mutation error:', error);
-    }
-  });
-
-  const onSubmit = (formData: Todo) => {
-    mutation.mutate(formData);
-  };
-
-  useEffect(() => {
-    if (currentTodo) {
-      form.reset({ ...currentTodo });
-    }
-  }, [form, currentTodo]);
-
-  return { form, onSubmit };
 }
