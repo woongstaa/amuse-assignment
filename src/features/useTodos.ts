@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Todo } from '../entities/todoApi';
+import { Todo } from '@/entities/todoApi';
 
 export function useTodos() {
   const [addModalVisible, setAddModalVisible] = useState(false);

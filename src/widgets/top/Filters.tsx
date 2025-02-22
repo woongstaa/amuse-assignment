@@ -1,6 +1,7 @@
-import { SetURLSearchParams, useSearchParams } from 'react-router';
 import { useCallback } from 'react';
-import { Tabs, TabsList, TabsTrigger } from '../../shared/ui/Tabs';
+import { SetURLSearchParams, useSearchParams } from 'react-router';
+import { Tabs, TabsList, TabsTrigger } from '@/shared/ui';
+
 export function Filters() {
   const [searchParams, setSearchParams] = useSearchParams();
 

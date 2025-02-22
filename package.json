@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server src/entities/db.json -p 8000"
+    "server": "json-server src/entities/db.json -p 8000",
+    "test": "vitest"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.0",
@@ -50,6 +51,7 @@
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "axios-mock-adapter": "^2.1.0",
     "eslint": "^9.19.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.18",

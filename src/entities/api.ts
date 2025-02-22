@@ -1,13 +1,13 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
-const API_URL = 'http://localhost:8000/';
+export const API_URL = 'http://localhost:8000/';
 
-const apiClient = axios.create({
+export const apiClient = axios.create({
   baseURL: API_URL,
   timeout: 10000
 });
 
-const api = async <T>(
+export const api = async <T>(
   method: 'get' | 'post' | 'put' | 'patch' | 'delete', //
   requestUrl: string,
   data?: T,
@@ -44,5 +44,3 @@ const api = async <T>(
     return Promise.reject(error);
   }
 };
-
-export default api;

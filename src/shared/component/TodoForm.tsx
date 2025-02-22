@@ -1,18 +1,21 @@
-import { FormInput } from '../../shared/component/FormInput';
-import { FormDatepicker } from '../../shared/component/FormDatepicker';
-import { FormSelect } from '../../shared/component/FormSelect';
 import { Path, UseFormReturn } from 'react-hook-form';
-import { FormWrapper } from '../../shared/component';
-import { Todo, CreateTodo } from '../../entities/todoApi';
+import { Button } from '@/shared/ui/Button';
+import { Todo, CreateTodo } from '@/entities/todoApi';
+import { FormInput } from './FormInput';
+import { FormDatepicker } from './FormDatepicker';
+import { FormSelect } from './FormSelect';
+import { FormWrapper } from './FormWrapper';
 
 export function TodoForm<T extends Todo | CreateTodo>({
   form, //
   onSubmit,
-  submitComponent
+  setIsVisible,
+  type
 }: {
   form: UseFormReturn<T>;
   onSubmit: (data: T) => void;
-  submitComponent: React.ReactNode;
+  setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  type: 'add' | 'edit';
 }) {
   return (
     <FormWrapper form={form} onSubmit={onSubmit}>
@@ -52,7 +55,13 @@ export function TodoForm<T extends Todo | CreateTodo>({
           { label: '높음', value: '3' }
         ]}
       />
-      <>{submitComponent}</>
+      <div className='h-8' />
+      <div className='flex justify-between gap-2'>
+        <Button variant={'outline'} onClick={() => setIsVisible(false)}>
+          취소
+        </Button>
+        <Button type='submit'>{type === 'add' ? '추가하기' : '수정하기'}</Button>
+      </div>
     </FormWrapper>
   );
 }

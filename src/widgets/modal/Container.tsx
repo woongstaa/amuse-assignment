@@ -1,5 +1,5 @@
-import { Portal } from '../../shared/component';
-import { Card } from '../../shared/ui';
+import { Portal } from '@/shared/component';
+import { Card } from '@/shared/ui';
 
 export function Container({
   isVisible, //

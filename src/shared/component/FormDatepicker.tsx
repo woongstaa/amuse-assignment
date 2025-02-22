@@ -1,11 +1,11 @@
-import { Control, FieldValues, Path } from 'react-hook-form';
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '../ui/Form';
-import { Popover, PopoverContent, PopoverTrigger } from '../ui/Popover';
-import { Button } from '../ui/Button';
-import { Calendar } from '../ui/Calendar';
-import { cn } from '../lib/utils';
 import { format } from 'date-fns';
 import { CalendarIcon } from 'lucide-react';
+import { Control, FieldValues, Path } from 'react-hook-form';
+import { cn } from '@/shared/lib/utils';
+import { Button } from '@/shared/ui/Button';
+import { Calendar } from '@/shared/ui/Calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/shared/ui/Popover';
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '@/shared/ui/Form';
 
 interface Props<T extends FieldValues> {
   control: Control<T>;

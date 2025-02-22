@@ -1,9 +1,10 @@
-import dayjs from 'dayjs';
-import { Todo } from '../entities/todoApi';
-import { Checkbox } from '../shared/ui/Checkbox';
-import { CardTitle, CardDescription } from '../shared/ui/Card';
-import { Trash2 } from 'lucide-react';
 import { memo } from 'react';
+import dayjs from 'dayjs';
+import { Trash2 } from 'lucide-react';
+
+import { Todo } from '@/entities/todoApi';
+import { Checkbox } from '@/shared/ui/Checkbox';
+import { CardTitle, CardDescription } from '@/shared/ui/Card';
 
 function ItemComponent({
   todo,

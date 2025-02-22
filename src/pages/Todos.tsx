@@ -1,8 +1,8 @@
-import { Top, Bottom } from '../widgets';
-import { List } from '../widgets/List';
-import { EditTodoForm } from '../widgets/modal/EditTodoForm';
-import { AddTodoForm } from '../widgets/modal/AddTodoForm';
-import { useTodos } from '../features/useTodos';
+import { List } from '@/widgets/list';
+import { useTodos } from '@/features/useTodos';
+import { Top } from '@/widgets/top';
+import { Bottom } from '@/widgets/bottom';
+import { EditTodoForm, AddTodoForm } from '@/widgets/modal';
 
 export function Todos() {
   const {

@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import api from './api';
+import { api } from './api';
 
 export const todoSchema = z.object({
   id: z.string(),

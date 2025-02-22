@@ -5,5 +5,4 @@ export { Card } from './Card';
 export { Label } from './Label';
 export { Checkbox } from './Checkbox';
 export { Separator } from './Separator';
-export { Toggle } from './Toggle';
-export { ToggleGroup } from './ToggleGroup';
+export { Tabs, TabsList, TabsTrigger, TabsContent } from './Tabs';

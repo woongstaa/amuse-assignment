@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useQueryClient, useMutation } from '@tanstack/react-query';
-import { todoApi, CreateTodo, createTodoSchema } from '../entities/todoApi';
+import { todoApi, CreateTodo, createTodoSchema } from '@/entities/todoApi';
 import { toast } from 'sonner';
 
 export function useAddTodoForm({ isVisible, setIsVisible }: { isVisible: boolean; setIsVisible: (isVisible: boolean) => void }) {

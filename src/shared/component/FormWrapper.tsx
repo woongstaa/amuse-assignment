@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { UseFormReturn, FieldValues } from 'react-hook-form';
-import { Form } from '../ui/Form';
+import { Form } from '@/shared/ui/Form';
 
 interface Props<T extends FieldValues> {
   form: UseFormReturn<T>;

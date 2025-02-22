@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useQueryClient, useMutation } from '@tanstack/react-query';
-import { Todo, todoApi, todoSchema } from '../entities/todoApi';
+import { Todo, todoApi, todoSchema } from '@/entities/todoApi';
 import { toast } from 'sonner';
 
 export function useEditTodoForm({ setIsVisible, currentTodo }: { setIsVisible: (isVisible: boolean) => void; currentTodo: Todo | null }) {

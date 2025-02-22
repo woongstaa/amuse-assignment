@@ -1,7 +1,7 @@
-import { Todo } from '../entities/todoApi';
+import { Todo } from '@/entities/todoApi';
+import { Separator } from '@/shared/ui/Separator';
+import { useTodoList } from '@/features';
 import { Item } from './ListItem';
-import { Separator } from '../shared/ui';
-import { useTodoList } from '../features';
 
 export function List({ setCurrentTodo, setEditModalVisible }: { setCurrentTodo: (todo: Todo | null) => void; setEditModalVisible: (visible: boolean) => void }) {
   const { data, isLoading, error, updateTodo, deleteTodo, onEdit } = useTodoList({ setCurrentTodo, setEditModalVisible });

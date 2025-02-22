@@ -1,6 +1,5 @@
 import { Container } from './Container';
-import { TodoForm } from './TodoForm';
-import { Button } from '../../shared/ui/Button';
+import { TodoForm } from '../../shared/component/TodoForm';
 import { useAddTodoForm } from '../../features';
 
 export function AddTodoForm({
@@ -17,22 +16,9 @@ export function AddTodoForm({
       <TodoForm //
         form={form}
         onSubmit={mutate}
-        submitComponent={<SubmitComponent setIsVisible={setIsVisible} />}
+        setIsVisible={setIsVisible}
+        type='add'
       />
     </Container>
-  );
-}
-
-function SubmitComponent({ setIsVisible }: { setIsVisible: (isVisible: boolean) => void }) {
-  return (
-    <>
-      <div className='h-8' />
-      <div className='flex justify-between gap-2'>
-        <Button variant={'outline'} onClick={() => setIsVisible(false)}>
-          취소
-        </Button>
-        <Button type='submit'>추가하기</Button>
-      </div>
-    </>
   );
 }

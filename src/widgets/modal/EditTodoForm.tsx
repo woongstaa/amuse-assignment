@@ -1,6 +1,5 @@
 import { Container } from './Container';
-import { TodoForm } from './TodoForm';
-import { Button } from '../../shared/ui/Button';
+import { TodoForm } from '../../shared/component/TodoForm';
 import { Todo } from '../../entities/todoApi';
 
 import { useEditTodoForm } from '../../features/useEditTodoForm';
@@ -21,22 +20,9 @@ export function EditTodoForm({
       <TodoForm //
         form={form}
         onSubmit={mutate}
-        submitComponent={<SubmitComponent setIsVisible={setIsVisible} />}
+        setIsVisible={setIsVisible}
+        type='edit'
       />
     </Container>
-  );
-}
-
-function SubmitComponent({ setIsVisible }: { setIsVisible: (isVisible: boolean) => void }) {
-  return (
-    <>
-      <div className='h-8' />
-      <div className='flex justify-between gap-2'>
-        <Button variant={'outline'} onClick={() => setIsVisible(false)}>
-          취소
-        </Button>
-        <Button type='submit'>수정하기</Button>
-      </div>
-    </>
   );
 }
