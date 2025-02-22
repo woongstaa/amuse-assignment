@@ -26,6 +26,7 @@ export type CreateTodo = z.infer<typeof createTodoSchema>;
 export const todoApi = {
   getTodos: async (queryParams?: { [key: string]: string }) => {
     const response = await api<Todo[]>('get', '/todos', undefined, { params: queryParams });
+
     return response;
   },
   createTodo: async (todo: CreateTodo) => {

@@ -1,13 +1,15 @@
 import { useCallback } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { type Todo, todoApi } from '../entities/todoApi';
+import { useParams } from 'react-router';
 
 export function useTodoList({ setCurrentTodo, setEditModalVisible }: { setCurrentTodo: (todo: Todo | null) => void; setEditModalVisible: (visible: boolean) => void }) {
   const queryClient = useQueryClient();
+  const { q } = useParams();
 
   const { data, isLoading, error } = useQuery<Todo[]>({
-    queryKey: ['todos'],
-    queryFn: () => todoApi.getTodos()
+    queryKey: ['todos', q],
+    queryFn: () => (q ? todoApi.getTodos({ q }) : todoApi.getTodos())
   });
 
   const { mutate: updateTodo } = useMutation({
