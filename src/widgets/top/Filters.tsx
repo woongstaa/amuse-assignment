@@ -1,6 +1,6 @@
+import { Button } from '@/shared/ui/Button';
 import { useCallback } from 'react';
 import { SetURLSearchParams, useSearchParams } from 'react-router';
-import { Tabs, TabsList, TabsTrigger } from '@/shared/ui';
 
 export function Filters() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -35,15 +35,18 @@ export function Filters() {
   const filterHandler = useCallback((value: string) => setQueryParams(value, setSearchParams), [setSearchParams]);
 
   return (
-    <Tabs defaultValue='all' value={getFilterValue(searchParams)} onValueChange={(value) => filterHandler(value)}>
-      <TabsList>
-        {filter.map((item) => (
-          <TabsTrigger key={item.value} value={item.value}>
-            <p>{item.label}</p>
-          </TabsTrigger>
-        ))}
-      </TabsList>
-    </Tabs>
+    <div className='flex flex-wrap gap-2 sm:justify-center'>
+      {filter.map((item) => (
+        <Button //
+          key={item.value}
+          variant={getFilterValue(searchParams) === item.value ? 'default' : 'outline'}
+          size={'sm'}
+          onClick={() => filterHandler(item.value)}
+        >
+          {item.label}
+        </Button>
+      ))}
+    </div>
   );
 }
 

@@ -15,7 +15,7 @@ export function Container({
   return (
     <Portal isVisible={isVisible} setIsVisible={setIsVisible}>
       <div className='h-dvh flex justify-center items-center'>
-        <Card className='w-3/6 p-4 rounded-lg' onClick={(e) => e.stopPropagation()}>
+        <Card className='w-5/6 sm:w-3/6 p-4 rounded-lg' onClick={(e) => e.stopPropagation()}>
           {children}
         </Card>
       </div>

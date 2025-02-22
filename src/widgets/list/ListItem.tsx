@@ -30,7 +30,7 @@ function ItemComponent({
         }}
       />
       <div className='w-2' />
-      <div className='max-w-[460px]'>
+      <div className='sm:flex-1 min-w-0'>
         <Title title={title} priority={priority} isComplete={isComplete} />
         <Memo memo={memo} />
         <DueDate dueDate={dueDate} />
@@ -86,7 +86,7 @@ function DueDate({ dueDate }: { dueDate: Todo['dueDate'] }) {
 function DeleteButton({ onDelete, todo }: { onDelete: (todo: Todo) => void; todo: Todo }) {
   return (
     <Trash2
-      className='hidden group-hover:block absolute top-3 right-0 hover:text-red-500'
+      className='block sm:hidden sm:group-hover:block absolute top-3 right-0 sm:hover:text-red-500'
       size={20}
       onClick={(e) => {
         e.stopPropagation();

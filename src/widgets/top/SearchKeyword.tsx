@@ -13,7 +13,7 @@ export function SearchKeyword() {
   };
 
   return (
-    <div className='flex py-4'>
+    <div className='flex'>
       <Input
         placeholder='검색할 키워드를 입력해주세요'
         className='w-full'

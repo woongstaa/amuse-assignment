@@ -10,7 +10,7 @@ export function List({ setCurrentTodo, setEditModalVisible }: { setCurrentTodo: 
   if (error) return <div>Error: {error.message}</div>;
 
   return (
-    <div className='h-[80%] overflow-y-scroll scrollbar-hide'>
+    <div className='h-[80%] sm:h-[85%] overflow-y-scroll scrollbar-hide'>
       {data &&
         data.map((todo, index) => {
           return (
