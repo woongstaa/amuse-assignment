@@ -1,51 +1,38 @@
-# React + TypeScript + Vite
+## 프로젝트 소개
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+아뮤즈 과제로 만든 할 일 관리 앱입니다.
 
-Currently, two official plugins are available:
+리액트와 타입스크립트 Vite로 구성하였으며, 라우터는 React Router, 상태관리는 React Query, 폼 관리는 React Hook Form, 유효성 검사는 Zod, 디자인 시스템은 Shadcn UI를 사용했습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+UI를 만들기보단 코드 구조에 집중하였기 때문에 디자인은 최대한 단순하게 Shadcn UI를 사용하였으며, 간단하게 FSD 아키텍처를 이용하여 코드를 구조화하였습니다.
 
-## Expanding the ESLint configuration
+API를 직접 만들기 보다는 JSON-SERVER를 이용하여 간단한 서버를 구축하였습니다.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+필수 구현기능이었던 TODO CURD 기능, 검색기능, 우선순위 기능을 구현하였으며, 추가적으로 특정 기준으로 필터링, 모바일 환경에서 더 좋은 경험을 주기 위해 반응형 레이아웃을 적용하였습니다.
 
-- Configure the top-level `parserOptions` property like this:
+테스트 코드는 순수 함수들을 이용한 함수들에 유닛테스트만 작성했습니다.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 사용 기술
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- React
+- TypeScript
+- TailwindCSS
+- React Query
+- React Hook Form
+- React Router
+- Zod
+- Shadcn UI
+- Vite
+- Vitest
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 실행 방법
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# amuse-assignment
+1. 프로젝트 폴더로 이동
+2. `yarn install`
+3. `yarn server`
+4. `yarn dev`
+
+## 테스트 방법
+
+1. 프로젝트 폴더로 이동
+2. `yarn test`
