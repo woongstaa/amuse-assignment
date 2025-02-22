@@ -12,14 +12,9 @@ export const todoSchema = z.object({
 
 export type Todo = z.infer<typeof todoSchema>;
 
-export const createTodoSchema = todoSchema
-  .omit({
-    id: true
-  })
-  .extend({
-    createdAt: z.date().default(() => new Date()),
-    lastEditedAt: z.date().default(() => new Date())
-  });
+export const createTodoSchema = todoSchema.omit({
+  id: true
+});
 
 export type CreateTodo = z.infer<typeof createTodoSchema>;
 
