@@ -1,40 +1,12 @@
 {
   "todos": [
     {
-      "id": "5243",
-      "title": "안녕하세요",
-      "dueDate": "2025-03-14T15:00:00.000Z",
-      "memo": "ㅁㄴㅇㄹ",
-      "priority": "2",
-      "isComplete": true
-    },
-    {
-      "title": "ㅁㄴㅇㄹㅂㅂㅂㅂㅂ",
-      "memo": "",
-      "priority": "0",
+      "title": "테스트입니다",
+      "dueDate": "2025-02-27T15:00:00.000Z",
+      "memo": "안녕하세요",
+      "priority": "3",
       "isComplete": false,
-      "id": "KtfBFxl"
-    },
-    {
-      "title": "ㅋㅌㅊㅍ",
-      "memo": "",
-      "priority": "0",
-      "isComplete": false,
-      "id": "V_wX_0O"
-    },
-    {
-      "title": "qweqweasdfasdfasdf",
-      "memo": "",
-      "priority": "0",
-      "isComplete": false,
-      "id": "Lod49hO"
-    },
-    {
-      "title": "ㅋㅌㅊㅍㅋㅌㅊㅍㅋㅌㅊㅍ",
-      "memo": "",
-      "priority": "0",
-      "isComplete": false,
-      "id": "Ed3iS8G"
+      "id": 2
     }
   ]
 }

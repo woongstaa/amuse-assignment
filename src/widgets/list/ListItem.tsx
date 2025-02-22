@@ -66,6 +66,8 @@ function Title({ title, priority, isComplete }: { title: Todo['title']; priority
 }
 
 function Memo({ memo }: { memo: Todo['memo'] }) {
+  if (!memo) return null;
+
   return (
     <>
       <div className='h-1' />
@@ -75,6 +77,8 @@ function Memo({ memo }: { memo: Todo['memo'] }) {
 }
 
 function DueDate({ dueDate }: { dueDate: Todo['dueDate'] }) {
+  if (!dueDate) return null;
+
   return (
     <>
       <div className='h-1' />

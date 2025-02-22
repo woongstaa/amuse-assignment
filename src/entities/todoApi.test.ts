@@ -7,7 +7,7 @@ describe('Todo API 테스트', () => {
   let mock: MockAdapter;
 
   const mockTodo: Todo = {
-    id: '1',
+    id: 1,
     title: '테스트 할 일',
     isComplete: false,
     priority: '2',
