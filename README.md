@@ -18,6 +18,7 @@ API를 직접 만들기 보다는 JSON-SERVER를 이용하여 간단한 서버�
 - TypeScript
 - TailwindCSS
 - React Query
+- Suspensive
 - React Hook Form
 - React Router
 - Zod
