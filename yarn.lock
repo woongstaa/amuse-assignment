@@ -168,6 +168,16 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
+"@colors/colors@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
+  integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
+
+"@commander-js/extra-typings@^12.1.0":
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/@commander-js/extra-typings/-/extra-typings-12.1.0.tgz#5441bae756d326d34f1b9dceb0d78dbf5bc05d81"
+  integrity sha512-wf/lwQvWAA0goIghcb91dQYpkLBcyhOhQNqG/VgWhnKzgt+UOMvra7EX/2fv70arm5RW+PUHoQHHDa6/p77Eqg==
+
 "@esbuild/aix-ppc64@0.24.2":
   version "0.24.2"
   resolved "https://registry.yarnpkg.com/@esbuild/aix-ppc64/-/aix-ppc64-0.24.2.tgz#38848d3e25afe842a7943643cbcd387cc6e13461"
@@ -861,6 +871,32 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.34.8.tgz#4cdb2cfae69cdb7b1a3cc58778e820408075e928"
   integrity sha512-U0FaE5O1BCpZSeE6gBl3c5ObhePQSfk9vDRToMmTkbhCOgW4jqvtS5LGyQ76L1fH8sM0keRp4uDTsbjiUyjk0g==
 
+"@suspensive/react-query-4@^2.18.12":
+  version "2.18.12"
+  resolved "https://registry.yarnpkg.com/@suspensive/react-query-4/-/react-query-4-2.18.12.tgz#e22c552dcad4d61756bb331287f070b38ce3a1b2"
+  integrity sha512-HZcFLpnNtGl+PMrAtq1C9s9HyhvNoVQg2X6hKvFU7Z4CoNAbAI06cRfWHdVmUHIK4CgTSlbKfzlW0Bw7WffIqA==
+
+"@suspensive/react-query-5@^2.18.12":
+  version "2.18.12"
+  resolved "https://registry.yarnpkg.com/@suspensive/react-query-5/-/react-query-5-2.18.12.tgz#a494942d5368a74fe9a571207f9e8bcc0ebc5e12"
+  integrity sha512-IADiLCcf9GEYwDkmJEBEWPj8e4NBfH94PXPACgAWEgsP8eXy1tSLRxls2crn8ibgm6kGSuodUGFA7WpwWkTPvw==
+
+"@suspensive/react-query@^2.18.12":
+  version "2.18.12"
+  resolved "https://registry.yarnpkg.com/@suspensive/react-query/-/react-query-2.18.12.tgz#06e6f0c22c0ad403e9a85be0b53af7e30891831b"
+  integrity sha512-vx7MCShSdyh3heUsTFxo4TU4+7Xfk56T1Z3gUT2wtpftO5p4j5tEBi82L7/6Efmk6/Apcf2o8Ddr9ysder2WBw==
+  dependencies:
+    "@commander-js/extra-typings" "^12.1.0"
+    "@suspensive/react-query-4" "^2.18.12"
+    "@suspensive/react-query-5" "^2.18.12"
+    cli-table3 "^0.6.5"
+    commander "^12.1.0"
+
+"@suspensive/react@^2.18.12":
+  version "2.18.12"
+  resolved "https://registry.yarnpkg.com/@suspensive/react/-/react-2.18.12.tgz#ea03d2275b2c2f89d426e871b89af279dca9805d"
+  integrity sha512-De3sVLxLnMpTSOfW3t3D8uh8+/bK8+L/mV8YRAwjW2PyR8BBe9+nctFRVO+ZCIFKUs7VPtnIXnb+5bKfBQ1vog==
+
 "@tanstack/eslint-plugin-query@^5.66.1":
   version "5.66.1"
   resolved "https://registry.yarnpkg.com/@tanstack/eslint-plugin-query/-/eslint-plugin-query-5.66.1.tgz#9951e4d3633ca6248196742cad437b4d7c760cd7"
@@ -873,7 +909,7 @@
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.66.4.tgz#44b87bff289466adbfa0de8daa5756cbd2d61c61"
   integrity sha512-skM/gzNX4shPkqmdTCSoHtJAPMTtmIJNS0hE+xwTTUVYwezArCT34NMermABmBVUg5Ls5aiUXEDXfqwR1oVkcA==
 
-"@tanstack/react-query@^5.66.7":
+"@tanstack/react-query@^5.66.9":
   version "5.66.9"
   resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.66.9.tgz#1c8be303adae59e9cee877490fbb2c23dfa26927"
   integrity sha512-NRI02PHJsP5y2gAuWKP+awamTIBFBSKMnO6UVzi03GTclmHHHInH5UzVgzi5tpu4+FmGfsdT7Umqegobtsp23A==
@@ -1376,6 +1412,15 @@ class-variance-authority@^0.7.1:
   dependencies:
     clsx "^2.1.1"
 
+cli-table3@^0.6.5:
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/cli-table3/-/cli-table3-0.6.5.tgz#013b91351762739c16a9567c21a04632e449bf2f"
+  integrity sha512-+W/5efTR7y5HRD7gACw9yQjqMVvEMLBHmboM/kPWam+H+Hmyrgjh6YncVKK122YZkXrLudzTuAukUw9FnMf7IQ==
+  dependencies:
+    string-width "^4.2.0"
+  optionalDependencies:
+    "@colors/colors" "1.5.0"
+
 cliui@^8.0.1:
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-8.0.1.tgz#0c04b075db02cbfe60dc8e6cf2f5486b1a3608aa"
@@ -1408,6 +1453,11 @@ combined-stream@^1.0.8:
   integrity sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
   dependencies:
     delayed-stream "~1.0.0"
+
+commander@^12.1.0:
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-12.1.0.tgz#01423b36f501259fdaac4d0e4d60c96c991585d3"
+  integrity sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==
 
 commander@^4.0.0:
   version "4.1.1"
